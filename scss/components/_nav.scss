@@ -1,0 +1,75 @@
+header{
+    height:80px;
+    background-color: #49484872; 
+    backdrop-filter:blur(3rem);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+
+
+nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0  2rem;
+    z-index: 100;
+    transition: all;
+    &:hover{box-shadow: #333;}
+}
+
+.logo{width: 200px;}
+
+.menu_hamburguesa{display: none;}
+.menu_hamburguesa:checked + .il_links{
+    height: 100vh;
+}
+
+
+.list_icon { color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.il_links {
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.959);
+    backdrop-filter:( 10rem);
+    position: absolute;
+    top:80px;
+    left:0;
+    height:0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    transition: all .3s;
+    z-index: 101;
+    
+}
+
+.buttons {
+    font-size:2rem;
+    color: rgba(0, 0, 0, 0.603);
+    font-weight:bold;
+    transition: all .1s;}
+.buttons:hover{color: greenyellow;
+font-size:1px;}
+@media (min-width:768px){
+    .labe_hamburguesa{
+        display: none;
+    }
+    .il_links{position:static;
+    width: auto;
+    height: auto;
+flex-direction: row;
+background-color: rgba(255, 166, 0, 0);}
+    .buttons{font-size: 1rem;
+    transition: all .5s;
+padding: .2rem .9rem;}
+    .buttons:hover{color: greenyellow;
+        font-size:1.1rem;}}

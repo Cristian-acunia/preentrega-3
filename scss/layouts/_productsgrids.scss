@@ -1,0 +1,90 @@
+$fondo-productos:rgba(37, 185, 0, 0.658);
+
+.grid-container-productos {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "termos termos termos"
+    "botellas botellas botellas"
+    "variado variado variado";
+  gap: 40px;
+  padding: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.termos,
+.vasos,
+.variados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+  
+}
+
+.termos {
+  grid-area: termos;
+  background-color:$fondo-productos;
+}
+
+.vasos {
+  grid-area: botellas;
+  background-color:$fondo-productos;
+}
+
+.variados {
+  grid-area: variado;
+  background-color: $fondo-productos;
+}
+
+
+
+@media (max-width: 1200px) {
+  .grid-container-productos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "termos termos"
+      "botellas botellas"
+      "variado variado";
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container-productos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "termos"
+      "botellas"
+      "variado";
+  }
+
+  .termos,
+  .vasos,
+  .variados {
+    padding: 10px;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container-productos {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .termos,
+  .vasos,
+  .variados {
+    padding: 5px;
+  }
+}

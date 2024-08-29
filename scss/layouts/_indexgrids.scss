@@ -1,0 +1,13 @@
+.grids {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 500px 800px;
+    grid-template-areas:
+        "bienvenida bienvenida bienvenida"
+        "imagen imagen imagen"
+        "producto producto producto";
+    gap: 80px;
+}
+    .grid1{grid-area:bienvenida;  display: flex;}
+    .grid2{grid-area: imagen;display: flex; padding:50px;}
+    .grid3{grid-area: producto;display: flex;}
